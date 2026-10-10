@@ -4,7 +4,7 @@ addEventListener('scroll',()=>{
   nav.classList.toggle('solid',scrollY>40);
   const h=document.documentElement.scrollHeight-innerHeight;
   bar.style.width=(h>0?scrollY/h*100:0)+'%';
-  if(hero&&scrollY<innerHeight)hero.style.marginTop=(scrollY*.15)+'px';
+  if(hero&&innerWidth>800&&scrollY<innerHeight)hero.style.marginTop=(scrollY*.15)+'px';
 },{passive:true});
 $$('.card').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('open')));
 $('#yr').textContent=new Date().getFullYear();
@@ -39,3 +39,17 @@ targets.forEach(t=>io.observe(t));
 // hero stats count-up after intro
 setTimeout(()=>$$('.stats [data-count]').forEach(count),seen?300:1700);
 targets.forEach(el=>el.addEventListener('transitionend',e=>{if(e.propertyName==='transform'&&el.classList.contains('in'))el.classList.add('done')}));
+
+// desktop slider arrows (only where a row overflows)
+$$('.slider:not(.tiles)').forEach(s=>{
+  const w=document.createElement('div');w.className='sw';
+  s.parentNode.insertBefore(w,s);w.appendChild(s);
+  [['l','\u2039',-1],['r','\u203A',1]].forEach(([k,t,d])=>{
+    const b=document.createElement('button');b.className='arrow '+k;b.type='button';
+    b.setAttribute('aria-label',d<0?'Scroll left':'Scroll right');b.textContent=t;
+    b.addEventListener('click',()=>s.scrollBy({left:d*s.clientWidth*.8,behavior:'smooth'}));
+    w.appendChild(b);
+  });
+  const chk=()=>w.classList.toggle('over',s.scrollWidth>s.clientWidth+4);
+  chk();addEventListener('resize',chk);
+});
