@@ -83,3 +83,27 @@ footer{text-align:center;color:#757575;font-size:.8rem;padding:30px;border-top:1
 .reveal.done{transition:transform .25s,box-shadow .25s,opacity .25s;transition-delay:0s!important}
 .card.in:hover,.card.in:focus,.card.in.open{transform:scale(1.06)}
 .logo-tile.in:hover{transform:scale(1.12)}
+
+.contact .btn.play:hover{background:var(--red);color:#fff;opacity:1}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.sw{position:relative}
+.arrow{display:none;position:absolute;top:12px;bottom:90px;width:4%;min-width:44px;border:0;background:#000a;color:#fff;font-size:2rem;cursor:pointer;z-index:6;opacity:0;transition:opacity .2s}
+.arrow.l{left:-4%}.arrow.r{right:-4%}
+@media(hover:hover){.sw.over .arrow{display:block}.sw:hover .arrow{opacity:1}}
+.nf{min-height:100vh;display:flex;flex-direction:column}
+.nf-logo{padding:24px 4%;display:block}
+.nf-box{margin:auto;text-align:center;padding:0 5% 80px;max-width:640px}
+.nf-box h1{font-size:clamp(2.5rem,8vw,5rem)}.nf-box p{color:var(--mut);margin:14px 0 24px;font-size:1.1rem}
+.nf-box .code{font-size:.8rem;margin-top:30px}.nf-box .code b{color:var(--red)}
+@media(max-width:800px){
+ .hero{flex-direction:column;align-items:stretch;justify-content:flex-start;min-height:0;padding:86px 5% 20px}
+ .hero-text{order:1;max-width:none}
+ .hero>img{position:relative;order:2;right:auto;top:auto;width:100%;height:auto;max-height:420px;margin-top:28px;opacity:1;border-radius:8px;object-fit:cover;object-position:50% 25%;animation:none;
+  -webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+ .hero::after{display:none}
+ .btns{margin-top:22px}
+ .btn{padding:10px 20px;font-size:1rem}
+ .contact .btns .btn{flex:1 1 100%;text-align:center}
+}
+.dot{flex:none}
+.contact h2{line-height:1.2}
