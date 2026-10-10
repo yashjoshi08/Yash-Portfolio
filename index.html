@@ -58,27 +58,61 @@
 
 <section class="row" id="experience">
   <h2>Continue Watching: Experience</h2>
-  <div class="slider">
-    <article class="card wide" tabindex="0"><div class="front"><span class="n">DevOps Engineer</span><span class="s">TTC Holidays &middot; Jul 2023 &ndash; Jul 2026</span></div>
-      <ul class="detail">
-        <li>Sustained 99.5%+ uptime and cut MTTD by 35% with CloudWatch, Prometheus and Grafana monitoring across EC2, Lambda and RDS.</li>
-        <li>Accelerated releases by 40% with Jenkins pipelines and ArgoCD GitOps rollback on EKS, enabling zero-downtime rolling updates.</li>
-        <li>Cut provisioning time by 60% and eliminated config drift with modular Terraform and Ansible across dev, staging and prod.</li>
-        <li>Cut manual operational effort by 50% with Python and Bash automation tooling.</li>
-        <li>Reduced cloud spend by 20% and removed over-permissioned IAM roles across 3 AWS accounts.</li>
-      </ul></article>
+  <div class="tl">
+    <article class="tl-item">
+      <div class="tl-card">
+        <header class="tl-head">
+          <div class="mono" aria-hidden="true">TTC</div>
+          <div class="tl-title"><h3>DevOps Engineer</h3><p>TTC Holidays &middot; Pune, Maharashtra</p></div>
+          <span class="tl-date">Jul 2023 &ndash; Jul 2026 &middot; 3 yrs</span>
+        </header>
+        <div class="tl-tech"><span class="tchip"><img src="assets/logos/aws.svg" alt="AWS" title="AWS" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/terraform.svg" alt="Terraform" title="Terraform" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/jenkins.svg" alt="Jenkins" title="Jenkins" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/argocd.svg" alt="ArgoCD" title="ArgoCD" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/kubernetes.svg" alt="Kubernetes" title="Kubernetes" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/prometheus.svg" alt="Prometheus" title="Prometheus" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/grafana.svg" alt="Grafana" title="Grafana" width="20" height="20" loading="lazy"></span><span class="tchip"><img src="assets/logos/python.svg" alt="Python" title="Python" width="20" height="20" loading="lazy"></span></div>
+        <div class="tl-metrics">
+          <div><strong data-count="99.5" data-dec="1" data-suf="%+">99.5%+</strong><span>application uptime</span></div>
+          <div><strong data-count="35" data-suf="%">35%</strong><span>lower MTTD</span></div>
+          <div><strong data-count="40" data-suf="%">40%</strong><span>faster releases</span></div>
+          <div><strong data-count="60" data-suf="%">60%</strong><span>faster provisioning</span></div>
+          <div><strong data-count="50" data-suf="%">50%</strong><span>less manual effort</span></div>
+          <div><strong data-count="20" data-suf="%">20%</strong><span>lower cloud spend</span></div>
+        </div>
+        <details>
+          <summary>Key contributions</summary>
+          <ul class="detail-list">
+            <li>Sustained 99.5%+ uptime and cut MTTD by 35% with CloudWatch, Prometheus and Grafana monitoring across EC2, Lambda and RDS.</li>
+            <li>Accelerated releases by 40% with Jenkins pipelines and ArgoCD GitOps rollback on EKS, enabling zero-downtime rolling updates.</li>
+            <li>Cut provisioning time by 60% and eliminated config drift with modular Terraform and Ansible across dev, staging and prod.</li>
+            <li>Cut manual operational effort by 50% with Python and Bash automation tooling.</li>
+            <li>Reduced cloud spend by 20% and removed over-permissioned IAM roles across 3 AWS accounts.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+    <div class="tl-now"><i class="dot"></i> Now &middot; Open to DevOps, Cloud, SRE and Platform Engineer roles &middot; Immediate joiner</div>
   </div>
 </section>
 
 <section class="row" id="projects">
   <h2>Trending Projects</h2>
-  <div class="slider">
-    <article class="card" tabindex="0"><div class="front"><span class="n">DevSecOps Pipeline on AWS EKS</span><span class="s">Terraform &middot; Jenkins &middot; ArgoCD</span></div>
-      <ul class="detail"><li>Provisioned IAM, security groups, EC2 and a multi-node EKS cluster with modular Terraform.</li><li>Jenkins pipeline with SonarQube, OWASP Dependency-Check and Trivy as security gates.</li><li>GitOps delivery via ArgoCD, observability with Prometheus and Grafana.</li></ul></article>
-    <article class="card" tabindex="0"><div class="front"><span class="n">CI/CD &amp; Kubernetes on AWS</span><span class="s">EKS &middot; Prometheus &middot; Grafana</span></div>
-      <ul class="detail"><li>Cut deployment lead time by 45% with a Terraform-provisioned EKS platform and containerised Jenkins workflows.</li><li>Cut incident resolution time by 30% with Prometheus, Grafana and CloudWatch alarms.</li></ul></article>
-    <article class="card" tabindex="0"><div class="front"><span class="n">AWS Infra &amp; CI/CD Automation</span><span class="s">Terraform &middot; Ansible &middot; Jenkins</span></div>
-      <ul class="detail"><li>Cut environment setup from several hours to under 15 minutes (EC2, RDS, S3, IAM, Route 53, ALB).</li><li>Reduced deployment-related incidents by 40% by removing manual release steps.</li></ul></article>
+  <p class="note">Diagrams are illustrative architecture overviews, not screenshots of deployed systems.</p>
+  <div class="pgrid">
+    <article class="pcard">
+      <div class="pimg"><img src="assets/illustrations/devsecops-pipeline.svg" alt="Illustrative CI/CD diagram: Git, Jenkins, SonarQube, Trivy, ECR, Argo CD and Amazon EKS" width="640" height="360" loading="lazy" decoding="async"></div>
+      <div class="pbody"><h3>DevSecOps Pipeline on AWS EKS</h3><p class="psub">Terraform &middot; Jenkins &middot; ArgoCD</p>
+        <ul><li>Provisioned IAM, security groups, EC2 and a multi-node EKS cluster with modular Terraform.</li><li>Jenkins pipeline with SonarQube, OWASP Dependency-Check and Trivy as security gates.</li><li>GitOps delivery via ArgoCD, observability with Prometheus and Grafana.</li></ul>
+        <div class="badges"><span>Terraform</span><span>Jenkins</span><span>SonarQube</span><span>OWASP</span><span>Trivy</span><span>ArgoCD</span><span>EKS</span><span>Prometheus</span><span>Grafana</span></div></div>
+    </article>
+    <article class="pcard">
+      <div class="pimg"><img src="assets/illustrations/kubernetes-cicd.svg" alt="Illustrative diagram: Jenkins deploys a container image to an EKS cluster monitored by Prometheus and Grafana" width="640" height="360" loading="lazy" decoding="async"></div>
+      <div class="pbody"><h3>CI/CD &amp; Kubernetes on AWS</h3><p class="psub">EKS &middot; Prometheus &middot; Grafana</p>
+        <ul><li>Cut deployment lead time by 45% with a Terraform-provisioned EKS platform and containerised Jenkins workflows.</li><li>Cut incident resolution time by 30% with Prometheus, Grafana and CloudWatch alarms.</li></ul>
+        <div class="badges"><span>Terraform</span><span>Jenkins</span><span>EKS</span><span>Route 53</span><span>Prometheus</span><span>Grafana</span><span>CloudWatch</span></div></div>
+    </article>
+    <article class="pcard">
+      <div class="pimg"><img src="assets/illustrations/aws-infrastructure.svg" alt="Illustrative diagram: Terraform and Ansible provisioning ALB, EC2, RDS, S3 and IAM on AWS" width="640" height="360" loading="lazy" decoding="async"></div>
+      <div class="pbody"><h3>AWS Infra &amp; CI/CD Automation</h3><p class="psub">Terraform &middot; Ansible &middot; Jenkins</p>
+        <ul><li>Cut environment setup from several hours to under 15 minutes (EC2, RDS, S3, IAM, Route 53, ALB).</li><li>Reduced deployment-related incidents by 40% by removing manual release steps.</li></ul>
+        <div class="badges"><span>Terraform</span><span>Ansible</span><span>Jenkins</span><span>EC2</span><span>RDS</span><span>S3</span><span>IAM</span><span>Route 53</span><span>ALB</span></div></div>
+    </article>
   </div>
 </section>
 
