@@ -17,7 +17,7 @@ if(seen){splash.style.display='none';document.body.classList.add('ready')}
 else{setTimeout(start,1500);try{sessionStorage.setItem('intro','1')}catch(e){}}
 
 // scroll reveal with stagger
-const targets=$$('.row h2,.sg h3,.card,.logo-tile,.num,.chips,.contact>*');
+const targets=$$('.row h2,.note,.sg h3,.card,.pcard,.tl-item,.tl-now,.logo-tile,.num,.chips,.contact>*');
 targets.forEach(el=>{
   el.classList.add('reveal');
   const sibs=[...el.parentElement.children];
