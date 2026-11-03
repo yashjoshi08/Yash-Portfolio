@@ -147,3 +147,48 @@ footer{text-align:center;color:#757575;font-size:.8rem;padding:30px;border-top:1
 .tl-now{margin-top:6px;padding:4px 0;color:var(--mut);font-size:.88rem}
 .tl-now .dot{display:inline-block;margin-right:6px}
 @media(max-width:800px){.tl{padding-left:30px}.tl::before{left:7px}.tl-item::before{left:-29px}.tl-now::before{left:-27px}.tl-card{padding:16px}.tl-date{order:3}.pgrid{grid-template-columns:1fr}}
+
+
+/* Featured project emphasis */
+.featured-project{
+  border-color:#e5091466;
+  background:linear-gradient(145deg,#251418 0%,#17191e 62%,#111318 100%);
+  box-shadow:0 10px 34px #e5091418;
+}
+.featured-project:hover{
+  box-shadow:0 14px 38px #000b,0 0 0 1px #e5091470;
+}
+.project-label{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 8px;
+  color:#ff737a;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:1.8px;
+}
+.project-label span{
+  color:#b3b3b3;
+  font-size:.65rem;
+  letter-spacing:1px;
+}
+.project-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.project-links a{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border:1px solid #e5091470;
+  border-radius:6px;
+  color:#fff;
+  background:#e509141a;
+  font-size:.82rem;
+  font-weight:700;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.project-links a:hover{
+  background:#e50914;
+  border-color:#e50914;
+  transform:translateY(-2px);
+}
