@@ -92,9 +92,25 @@
 </section>
 
 <section class="row" id="projects">
-  <h2>Trending Projects</h2>
+  <h2>Featured Projects</h2>
   <p class="note">Diagrams are illustrative architecture overviews, not screenshots of deployed systems.</p>
   <div class="pgrid">
+    <article class="pcard featured-project">
+      <div class="pimg"><img src="assets/illustrations/aws-infrastructure.svg" alt="Illustrative AWS ECS Fargate blue-green deployment architecture" width="640" height="360" loading="lazy" decoding="async"></div>
+      <div class="pbody">
+        <div class="project-label">FEATURED PROJECT <span>01 / 04</span></div>
+        <h3>Secure CI/CD to AWS ECS Fargate with Blue-Green Deployments</h3>
+        <p class="psub">GitHub Actions · AWS ECS Fargate · CodeDeploy · Terraform</p>
+        <ul>
+          <li>Built a GitHub Actions pipeline that runs unit tests, Bandit, pip-audit and Trivy image scanning, failing builds on HIGH or CRITICAL image findings.</li>
+          <li>Configured GitHub-to-AWS authentication using OIDC with no long-lived AWS access keys and trust restricted to the repository's main branch.</li>
+          <li>Provisioned VPC, ALB, ECR, ECS Fargate, IAM and CodeDeploy with Terraform and S3 remote state locking.</li>
+          <li>Implemented blue-green releases with health checks, production traffic shifting and automatic rollback to the previous healthy version.</li>
+        </ul>
+        <div class="badges"><span>GitHub Actions</span><span>AWS OIDC</span><span>ECS Fargate</span><span>CodeDeploy</span><span>Terraform</span><span>ECR</span><span>Trivy</span><span>Bandit</span><span>pip-audit</span></div>
+        <div class="project-links"><a href="assets/Secure_ECS_Fargate_Blue_Green_Runbook.pdf" target="_blank" rel="noopener">View project runbook ↗</a></div>
+      </div>
+    </article>
     <article class="pcard">
       <div class="pimg"><img src="assets/illustrations/devsecops-pipeline.svg" alt="Illustrative CI/CD diagram: Git, Jenkins, SonarQube, Trivy, ECR, Argo CD and Amazon EKS" width="640" height="360" loading="lazy" decoding="async"></div>
       <div class="pbody"><h3>DevSecOps Pipeline on AWS EKS</h3><p class="psub">Terraform &middot; Jenkins &middot; ArgoCD</p>
