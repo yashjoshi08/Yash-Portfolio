@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+<title id="title">Secure AWS ECS Fargate blue-green deployment flow</title>
+<desc id="desc">GitHub Actions tests and scans a container, authenticates to AWS with OIDC, pushes to ECR, and deploys ECS Fargate tasks through CodeDeploy and an Application Load Balancer using blue-green traffic shifting.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#111827"/></linearGradient>
+  <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#94a3b8" opacity=".13"/></pattern>
+  <marker id="arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#94a3b8"/></marker>
+  <style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.label{font-size:12px;fill:#e2e8f0}.small{font-size:10px;fill:#94a3b8}.line{stroke:#94a3b8;stroke-width:1.5;fill:none;marker-end:url(#arrow)}.card{fill:#0f172a;stroke:#334155;stroke-width:1.2}.green{stroke:#34d399}.blue{stroke:#60a5fa}</style>
+</defs>
+<rect width="640" height="360" rx="14" fill="url(#bg)"/><rect width="640" height="360" rx="14" fill="url(#dots)"/>
+<text x="22" y="28" font-size="11" fill="#64748b" letter-spacing="1.5">SECURE DELIVERY PIPELINE · AWS AP-SOUTH-1</text>
+<g transform="translate(24 60)">
+ <rect class="card" width="122" height="76" rx="10" stroke="#a78bfa"/>
+ <text class="label" x="61" y="29" text-anchor="middle">GitHub</text><text class="label" x="61" y="46" text-anchor="middle">Actions</text><text class="small" x="61" y="64" text-anchor="middle">test · scan · build</text>
+</g>
+<path class="line" d="M148 98H178"/>
+<g transform="translate(182 60)">
+ <rect class="card" width="102" height="76" rx="10" stroke="#f59e0b"/>
+ <text class="label" x="51" y="31" text-anchor="middle">OIDC</text><text class="small" x="51" y="51" text-anchor="middle">short-lived</text><text class="small" x="51" y="64" text-anchor="middle">AWS role</text>
+</g>
+<path class="line" d="M286 98H316"/>
+<g transform="translate(320 60)">
+ <rect class="card" width="100" height="76" rx="10" stroke="#f59e0b"/>
+ <text class="label" x="50" y="31" text-anchor="middle">Amazon</text><text class="label" x="50" y="47" text-anchor="middle">ECR</text><text class="small" x="50" y="64" text-anchor="middle">immutable tag</text>
+</g>
+<path class="line" d="M422 98H452"/>
+<g transform="translate(456 60)">
+ <rect class="card" width="160" height="76" rx="10" stroke="#38bdf8"/>
+ <text class="label" x="80" y="30" text-anchor="middle">CodeDeploy</text><text class="small" x="80" y="50" text-anchor="middle">ECS blue-green</text><text class="small" x="80" y="64" text-anchor="middle">health gate + rollback</text>
+</g>
+<path d="M536 138V174H322V202" class="line"/>
+<g transform="translate(24 208)">
+ <rect class="card" width="150" height="90" rx="10" stroke="#38bdf8"/>
+ <text class="label" x="75" y="31" text-anchor="middle">Application</text><text class="label" x="75" y="48" text-anchor="middle">Load Balancer</text><text class="small" x="75" y="69" text-anchor="middle">prod :80 · test :8080</text>
+</g>
+<path class="line" d="M176 252H214"/>
+<g transform="translate(218 204)">
+ <rect class="card blue" width="164" height="100" rx="10"/>
+ <text class="label" x="82" y="21" text-anchor="middle">ECS Fargate</text>
+ <rect x="12" y="34" width="64" height="48" rx="7" fill="#1d4ed8" fill-opacity=".2" stroke="#60a5fa"/>
+ <text x="44" y="54" text-anchor="middle" font-size="11" fill="#bfdbfe">BLUE</text><text x="44" y="70" text-anchor="middle" font-size="9" fill="#93c5fd">current</text>
+ <rect x="88" y="34" width="64" height="48" rx="7" fill="#059669" fill-opacity=".2" stroke="#34d399"/>
+ <text x="120" y="54" text-anchor="middle" font-size="11" fill="#a7f3d0">GREEN</text><text x="120" y="70" text-anchor="middle" font-size="9" fill="#6ee7b7">candidate</text>
+</g>
+<path class="line" d="M384 252H420"/>
+<g transform="translate(424 208)">
+ <rect class="card" width="192" height="90" rx="10" stroke="#34d399"/>
+ <text class="label" x="96" y="30" text-anchor="middle">Traffic shift</text><text class="small" x="96" y="49" text-anchor="middle">test → health checks</text><text class="small" x="96" y="65" text-anchor="middle">prod → green target group</text><text x="96" y="80" text-anchor="middle" font-size="9" fill="#34d399">rollback if unhealthy</text>
+</g>
+<text x="24" y="334" font-size="10" fill="#64748b">Terraform-managed VPC · ALB · ECR · ECS · IAM · CodeDeploy · S3 remote state</text>
+</svg>
